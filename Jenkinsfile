@@ -2,19 +2,19 @@ pipeline {
     agent any 
     
       stages {
-          steps ( 'BUILD' ) {
+          steps ('BUILD') {
               sh 'sleep 5'
           }
       } 
       
       stages {
-          steps ( 'Test' ) {
+          steps ('Test') {
               sh 'sleep 5'
           }
       }  
       
       stages {
-          steps ( 'Depoly' ) {
+          steps ('Depoly') {
               sh 'sleep 5'
           }
       }
