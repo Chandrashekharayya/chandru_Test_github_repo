@@ -1,1 +1,38 @@
+pipeline {
+    agent none
+    stages {
+           stage ('BUILD') {
+            agent { label 'master' }
+            steps {
+                sh ..
+                    pwd
+                    sleep 5
+                    echo This is the first stage: BUILD
+                    ...
+            }
+           } 
+           
+           stage ('TEST') {
+            agent { label 'agent1' }
+            steps {
+                sh ..
+                    pwd
+                    sleep 5
+                    echo This is the first stage: TEST
+                    ...
+            }
+           }
 
+           
+            stage ('DEPOLY') {
+            agent { label 'agent1' }
+            steps {
+                sh ..
+                    pwd
+                    sleep 5
+                    echo This is the first stage: DEPOLY
+                    ...
+            }
+           }
+    }
+}
