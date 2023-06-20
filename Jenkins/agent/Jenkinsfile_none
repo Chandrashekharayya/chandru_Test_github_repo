@@ -4,7 +4,7 @@ pipeline {
            stage ('BUILD') {
             agent { label 'master' }
             steps {
-                sh ..
+                sh ...
                     pwd
                     sleep 5
                     echo This is the first stage: BUILD
@@ -15,7 +15,7 @@ pipeline {
            stage ('TEST') {
             agent { label 'agent1' }
             steps {
-                sh ..
+                sh ...
                     pwd
                     sleep 5
                     echo This is the first stage: TEST
@@ -27,7 +27,7 @@ pipeline {
             stage ('DEPOLY') {
             agent { label 'agent1' }
             steps {
-                sh ..
+                sh ...
                     pwd
                     sleep 5
                     echo This is the first stage: DEPOLY
