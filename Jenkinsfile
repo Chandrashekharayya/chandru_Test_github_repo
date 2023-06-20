@@ -5,21 +5,21 @@ pipeline {
         
         stage ('BUILD') {
             steps {
-                sh 'sleep5'
+                sh 'sleep 5'
             }
         }  
         
          
         stage ('Test') {
             steps {
-                sh 'sleep5'
+                sh 'sleep 5'
             }
         }
         
          
         stage ('DEPOLY') {
             steps {
-                sh 'sleep5'
+                sh 'sleep 5'
             }
         }
     }
